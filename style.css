@@ -34,9 +34,30 @@ h1 .accent{color:var(--or);display:block;}
 .btn-wa{padding:.9rem 2.2rem;background:transparent;color:var(--blanc);border:1px solid rgba(255,255,255,.2);font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:none;transition:border-color .3s,color .3s,transform .2s;display:inline-flex;align-items:center;gap:.5rem;}
 .btn-wa:hover{border-color:#25D366;color:#25D366;transform:translateY(-2px);}
 .hero-photo-wrap{position:relative;z-index:2;display:flex;justify-content:center;align-items:center;}
-.hero-photo-frame{position:relative;width:400px;height:500px;}
-.hero-photo-frame::before{content:'';position:absolute;top:18px;left:18px;right:-18px;bottom:-18px;border:1px solid var(--or);opacity:.35;z-index:-1;}
-.hero-photo{width:100%;height:100%;object-fit:cover;object-position:top;filter:grayscale(15%) contrast(1.05);display:block;animation:photoReveal 1.2s .5s both;}
+.hero-photo-frame {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 4/5;
+}
+
+.hero-photo-frame::before {
+    content: '';
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    right: -18px;
+    bottom: -18px;
+    border: 2px solid var(--or);
+    z-index: -1;
+}
+
+.hero-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
 .hero-badge{position:absolute;bottom:-1.5rem;right:-2.5rem;background:var(--gris);border:1px solid rgba(201,168,76,.3);padding:1rem 1.5rem;z-index:10;}
 .badge-num{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;color:var(--or);line-height:1;}
 .badge-lbl{font-size:.65rem;color:var(--texte-gris);letter-spacing:.15em;text-transform:uppercase;}
