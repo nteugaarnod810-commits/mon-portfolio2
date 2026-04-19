@@ -187,4 +187,25 @@ footer p{color:var(--texte-gris);font-size:.72rem;letter-spacing:.08em;}
   h1{font-size:3rem;}
   .hero-btns{flex-direction:column;}
   .projects-grid{grid-template-columns:1fr;}
+}/* Pour les téléphones */
+@media (max-width: 768px) {
+    #hero {
+        grid-template-columns: 1fr; /* On passe à une seule colonne */
+        text-align: center;
+        height: auto;
+        padding-top: 100px;
+    }
+
+    .hero-content {
+        order: 1; /* Le texte en premier */
+    }
+
+    /* Si ta photo est dans une div ou est une img */
+    .hero-image, .hero img, #hero img {
+        order: 2; /* La photo en dessous du texte */
+        display: block;
+        margin: 0 auto;
+        max-width: 80%; /* Pour qu'elle ne soit pas trop géante */
+        height: auto;
+    }
 }
